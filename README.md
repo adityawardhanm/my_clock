@@ -1,37 +1,39 @@
 # My Clock
 
-A simple, ad-free clock app designed to turn your phone into a beautiful bedside clock.
+![Flutter](https://img.shields.io/badge/flutter-%2302569B.svg?style=for-the-badge&logo=flutter&logoColor=white)&nbsp;![Kotlin](https://img.shields.io/badge/kotlin-%230095D5.svg?style=for-the-badge&logo=kotlin&logoColor=white)&nbsp;[![Version](https://img.shields.io/badge/version-1.0.0-blue?style=for-the-badge)](https://github.com/adityawardhanm/my_clock/releases/tag/v1.0.0)
+
 
 ## About
+I recently started using my phone as an 'Standby Clock'. However, when I went to search for any android apps, most of these apps had ads. Now as much as I like supporting developers work, all I wanted was a simple clock standby clock app, with no ads.
 
-I love using my phone as a clock — the AMOLED screen looks gorgeous with a minimal clock display. But every app I tried was cluttered with ads, which completely ruins the experience.
+**My Clock** is a lightweight Flutter-based app which displays the time and date in landscape mode with a wakelock enabled, keeping your screen on without interruption. The theme of your clock is directly tied to the android theme color.
 
-So I built my own.
+## Installation
 
-**My Clock** is a lightweight Flutter app that displays the time in landscape mode with a wakelock enabled, keeping your screen on without interruption.
+While you can always go ahead, build and install the apk from this code yourself. I also provide apk files on 
 
-## Screenshot
+* wfdef
 
-![App Screenshot](images/final.png)
+## How to Use
 
-## Planned Features
+* The watch by default shows the clock face in 24hr time format paired with the day and date.
+![App Screenshot 1](images/sample0.png)
 
-- Landscape-only display
-- Wakelock to prevent screen timeout
-- Clean, minimal UI optimized for AMOLED screens
+* If you tap anywhere on the screen, you get three buttons; first one is to change between the font types, the second one is to add fonts(in .otf and .ttf formats) and the third is a link to [My donate page](https://buymeacoffee.com/adityawardhanm) 
+![App Screenshot 2](images/sample1.png)
+
+Pretty simple.
 
 ## Future Plans
 
-Once complete, I'll release:
-- **Source code** — so anyone can customize it to their liking
-- **APK** — for direct installation
+* I do not intend to revisit this project until I wish to add a feature. However, I am open to feature suggestions.
 
-If there's enough interest, I may also publish it to the Google Play Store.
+* If there's enough interest, I may also publish it to the Google Play Store.
 
-I'm not planning to actively maintain this repo for feature requests, but if contributions come in, I'm happy to help where I can.
-
-I have a few more app ideas in the pipeline too — stay tuned!
-
-## License
+## License 
 
 This project is licensed under the [MIT License](LICENSE).
+
+## Support
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-%23FF813F?style=for-the-badge&logo=buy-me-a-coffee&logoColor=white)](https://www.buymeacoffee.com/adityawardhanm)

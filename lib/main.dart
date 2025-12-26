@@ -1,4 +1,5 @@
 // lib/main.dart
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:async';
@@ -12,7 +13,7 @@ final FontManager fontManager = FontManager();
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
-  await fontManager.init(); // Load user fonts
+  await fontManager.init();
   
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.landscapeLeft,
@@ -22,7 +23,6 @@ void main() async {
   runApp(const ClockApp());
 }
 
-// Add this method to _ClockScreenState
 Future<void> _openBuyMeACoffee() async {
   final uri = Uri.parse('https://buymeacoffee.com/adityawardhanm');
   if (await canLaunchUrl(uri)) {
@@ -40,12 +40,10 @@ class ClockApp extends StatelessWidget {
         ColorScheme colorScheme;
         
         if (darkDynamic != null) {
-          // Use the system's dark theme colors (your green!)
           colorScheme = darkDynamic.harmonized();
         } else {
-          // Fallback if dynamic color not available
           colorScheme = ColorScheme.fromSeed(
-            seedColor: Colors.green,
+            seedColor: Colors.white,
             brightness: Brightness.dark,
           );
         }
@@ -97,7 +95,6 @@ class _ClockScreenState extends State<ClockScreen> {
   void _toggleControls() {
     setState(() => _showControls = !_showControls);
     
-    // Auto-hide after 3 seconds
     if (_showControls) {
       Future.delayed(const Duration(seconds: 3), () {
         if (mounted && _showControls) {
@@ -129,7 +126,6 @@ class _ClockScreenState extends State<ClockScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // Get dynamic color from system (Material You)
     final colorScheme = Theme.of(context).colorScheme;
 
     return Scaffold(
@@ -139,7 +135,6 @@ class _ClockScreenState extends State<ClockScreen> {
         behavior: HitTestBehavior.opaque,
         child: Stack(
           children: [
-            // Clock - using SizedBox.expand + Center for true centering
             SizedBox.expand(
               child: Center(
                 child: FittedBox(
@@ -150,19 +145,17 @@ class _ClockScreenState extends State<ClockScreen> {
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        // Time
                         Text(
                           '${_now.hour.toString().padLeft(2, '0')}:${_now.minute.toString().padLeft(2, '0')}',
                           style: TextStyle(
                             fontSize: 300,
-                            height: 0.9, // Tighten line height
+                            height: 0.9,
                             fontFamily: _fonts[_currentFontIndex],
                             color: colorScheme.primary,
                           ),
                         ),
-                        // Pull date up closer
                         Transform.translate(
-                          offset: const Offset(0, -20), // Negative = move up
+                          offset: const Offset(0, -20), 
                           child: Text(
                             '${_getDayAbbreviation(_now.weekday)} ${_now.day}',
                             style: TextStyle(
@@ -179,7 +172,6 @@ class _ClockScreenState extends State<ClockScreen> {
                 ),
               ),
             ),
-            // Font change button - appears on tap
             if (_showControls)
               Positioned(
                 bottom: 40,

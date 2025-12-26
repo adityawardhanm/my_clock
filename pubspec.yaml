@@ -1,7 +1,7 @@
 name: my_clock
 description: "Simple clock app"
 publish_to: 'none'
-version: 1.0.0+2
+version: 1.0.0
 
 environment:
   sdk: ^3.10.4
@@ -36,26 +36,18 @@ flutter:
     - family: Aktura
       fonts:
         - asset: fonts/Aktura-Regular.otf
-          weight: 700
     - family: Array
       fonts:
         - asset: fonts/Array-Regular.otf
-          weight: 700
     - family: Gambarino
       fonts:
         - asset: fonts/Gambarino-Regular.otf
-          weight: 700
     - family: Melodrama
       fonts:
         - asset: fonts/Melodrama-Bold.otf
-          weight: 700
     - family: Outfit
       fonts:
         - asset: fonts/Outfit-ExtraBold.otf
-          weight: 700
     - family: Stardom
       fonts:
         - asset: fonts/Stardom-Regular.otf
-          weight: 700
-        
-          
