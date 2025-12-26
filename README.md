@@ -12,7 +12,7 @@ I recently started using my phone as an 'Standby Clock'. However, when I went to
 
 While you can always go ahead, build and install the apk from this code yourself. I also provide apk files on 
 
-* wfdef
+* [Github Releases](https://github.com/adityawardhanm/my_clock/releases/tag/v1.0.0)
 
 ## How to Use
 
